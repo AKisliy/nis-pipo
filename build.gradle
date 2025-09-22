@@ -2,8 +2,10 @@ plugins {
     id 'java'
 }
 
+var buildNumber = project.findProperty("BUILD_NUMBER") ?: "SNAPSHOT"
+
 group = 'org.example'
-version = '1.0-SNAPSHOT'
+version = "0.0-${buildNumber}"
 
 repositories {
     mavenCentral()
